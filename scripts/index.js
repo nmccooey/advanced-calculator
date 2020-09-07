@@ -28,7 +28,9 @@ function handleNumber(data) {
   if (currentDisplay === "0") {
       currentDisplay = data;
   } else {
-      currentDisplay += data;
+      if (currentDisplay.length < 16) {
+        currentDisplay += data;
+      }
   }
 }
 
@@ -80,6 +82,10 @@ function handleOperation(data) {
       break;
     case "squareroot":
       currentDisplay = "" + squareRoot(Number(currentDisplay));
+      render();
+      break;
+    case "percent":
+      currentDisplay = "" + percent(Number(currentDisplay));
       render();
       break;
     case "equals":
@@ -177,6 +183,10 @@ function factorial(num) {
 
 function power(num, power) {
   return num ** power;
+}
+
+function percent(num) {
+  return num / 100;
 }
 
 function posToNeg(number) {
