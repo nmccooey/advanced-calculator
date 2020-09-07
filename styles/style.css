@@ -1,8 +1,10 @@
+@import "calculator.css";
+
 html, body {
   margin: 0px;
   padding: 0px;
   height: 100vh;
-  background-color: rgb(245, 236, 236);
+  background-color: #E0FBFC;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -10,6 +12,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  height: 10vh;
+  background-color: #9DB4C0;
 }
 
 .title {
@@ -19,58 +24,8 @@ header {
 main {
   display: flex;
   justify-content: center;
-}
-
-.calc-container {
-  display: grid;
-  grid-template-columns: repeat(5, 80px);
-  grid-template-rows: repeat(6, 60px);
-  grid-gap: 10px 10px;
-  padding: 25px;
-  border: black solid 2px;
-  box-shadow: 10px 10px 10px #333333
-}
-
-.display-screen {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: flex-end;
-  border: black solid 2px;
-  box-shadow: inset 0 0 6px #000000;
-}
-
-.display-result {
-  align-self: center;
-  font-size: 45px;
-  margin: 0px 15px 0px 0px;
-  font-family: monospace;
-}
-
-.display-result-small {
-  font-size: 30px !important;
-}
-
-.calc-button {
-  border: none;
-  font-size: 30px;
-  font-weight: bold;
-  background-color: rgb(226, 177, 174);
-  cursor: pointer;
-}
-
-.calc-button:focus {
-  outline: 0;
-  border: solid #333333 3px;
-}
-
-.calc-button:hover{
-  background-color: rgb(221, 115, 101);
-}
-
-.calc-button:active {
-  background-color: rgb(233, 174, 164);
-  box-shadow: 0px 0px #333333;
-  transform: translateY(4px);
+  height: 80vh;
+  align-items: center;
 }
 
 /* Footer */
@@ -79,8 +34,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(124, 124, 124);
-  color: white;
+  background-color: #9DB4C0;
+  color: black;
   text-align: center;
   padding: 0.5rem;
   font-size: 1.1rem;
@@ -91,9 +46,15 @@ footer {
 }
 
 .fa-github {
-  color: white;
+  color: black;
 }
 
 .fa-github:hover {
   color: blue;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
 }
